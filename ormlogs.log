@@ -1,0 +1,44 @@
+[2019-12-13T07:53:18.079Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'demo' AND `TABLE_NAME` = 'migrations'
+[2019-12-13T07:53:18.089Z][QUERY]: CREATE TABLE `demo`.`migrations` (`id` int NOT NULL AUTO_INCREMENT, `timestamp` bigint NOT NULL, `name` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2019-12-13T07:53:18.124Z][QUERY]: SELECT * FROM `demo`.`migrations` `migrations` ORDER BY `id` DESC
+[2019-12-13T07:53:18.129Z]0 migrations are already loaded in the database.
+[2019-12-13T07:53:18.130Z]1 migrations were found in the source code.
+[2019-12-13T07:53:18.130Z]1 migrations are new migrations that needs to be executed.
+[2019-12-13T07:53:18.131Z][QUERY]: START TRANSACTION
+[2019-12-13T07:53:18.132Z][QUERY]: CREATE TABLE `user` (`id` int NOT NULL AUTO_INCREMENT, `name` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB
+[2019-12-13T07:53:18.151Z][QUERY]: INSERT INTO `demo`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1576223566316,"user1576223566316"]
+[2019-12-13T07:53:18.160Z]Migration user1576223566316 has been executed successfully.
+[2019-12-13T07:53:18.161Z][QUERY]: COMMIT
+[2019-12-13T07:57:47.991Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'demo' AND `TABLE_NAME` = 'migrations'
+[2019-12-13T07:57:48.003Z][QUERY]: SELECT * FROM `demo`.`migrations` `migrations` ORDER BY `id` DESC
+[2019-12-13T07:57:48.005Z]1 migrations are already loaded in the database.
+[2019-12-13T07:57:48.006Z]2 migrations were found in the source code.
+[2019-12-13T07:57:48.014Z]user1576223566316 is the last executed migration. It was executed on Fri Dec 13 2019 15:52:46 GMT+0800 (GMT+08:00).
+[2019-12-13T07:57:48.014Z]1 migrations are new migrations that needs to be executed.
+[2019-12-13T07:57:48.015Z][QUERY]: START TRANSACTION
+[2019-12-13T07:57:48.016Z][QUERY]: ALTER TABLE `user` ADD `address` varchar(255) NOT NULL
+[2019-12-13T07:57:48.037Z][QUERY]: INSERT INTO `demo`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1576223847916,"user1576223847916"]
+[2019-12-13T07:57:48.042Z]Migration user1576223847916 has been executed successfully.
+[2019-12-13T07:57:48.043Z][QUERY]: COMMIT
+[2019-12-13T08:01:51.483Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'demo' AND `TABLE_NAME` = 'migrations'
+[2019-12-13T08:01:51.495Z][QUERY]: SELECT * FROM `demo`.`migrations` `migrations` ORDER BY `id` DESC
+[2019-12-13T08:01:51.498Z]2 migrations are already loaded in the database.
+[2019-12-13T08:01:51.499Z]3 migrations were found in the source code.
+[2019-12-13T08:01:51.500Z]user1576223847916 is the last executed migration. It was executed on Fri Dec 13 2019 15:57:27 GMT+0800 (GMT+08:00).
+[2019-12-13T08:01:51.501Z]1 migrations are new migrations that needs to be executed.
+[2019-12-13T08:01:51.502Z][QUERY]: START TRANSACTION
+[2019-12-13T08:01:51.504Z][QUERY]: ALTER TABLE `user` ADD `phone` int NOT NULL
+[2019-12-13T08:01:51.515Z][QUERY]: INSERT INTO `demo`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1576224088771,"user1576224088771"]
+[2019-12-13T08:01:51.520Z]Migration user1576224088771 has been executed successfully.
+[2019-12-13T08:01:51.520Z][QUERY]: COMMIT
+[2019-12-13T08:04:00.566Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'demo' AND `TABLE_NAME` = 'migrations'
+[2019-12-13T08:04:00.581Z][QUERY]: SELECT * FROM `demo`.`migrations` `migrations` ORDER BY `id` DESC
+[2019-12-13T08:04:00.583Z]3 migrations are already loaded in the database.
+[2019-12-13T08:04:00.583Z]3 migrations were found in the source code.
+[2019-12-13T08:04:00.585Z]user1576224088771 is the last executed migration. It was executed on Fri Dec 13 2019 16:01:28 GMT+0800 (GMT+08:00).
+[2019-12-13T08:04:00.585Z]1 migrations are new migrations that needs to be executed.
+[2019-12-13T08:04:00.586Z][QUERY]: START TRANSACTION
+[2019-12-13T08:04:00.587Z][QUERY]: ALTER TABLE `user` DROP COLUMN `name`
+[2019-12-13T08:04:00.602Z][QUERY]: INSERT INTO `demo`.`migrations`(`timestamp`, `name`) VALUES (?, ?) -- PARAMETERS: [1576224216829,"user1576224216829"]
+[2019-12-13T08:04:00.609Z]Migration user1576224216829 has been executed successfully.
+[2019-12-13T08:04:00.609Z][QUERY]: COMMIT
